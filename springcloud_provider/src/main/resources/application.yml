@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.129:3306/zly?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.0.133:3306/zly?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123
 
@@ -15,7 +15,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.0.129:8080/eureka/
+      defaultZone: http://localhost:8080/eureka/
 
 mybatis:
   config-locations: classpath:mybatis/confg.xml
