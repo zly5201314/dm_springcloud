@@ -2,9 +2,9 @@ package com.jk.controller;
 
 import com.jk.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <pre>项目名称：dm_springcloud
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 修改备注：
  * @version </pre>
  */
-@RestController
+@Controller
 public class UserController {
 
     @Autowired
@@ -27,6 +27,28 @@ public class UserController {
     @GetMapping(value = "/hi")
     public String hi(@RequestParam String name) {
         return userservice.hiService( name );
+    }
+
+
+    @GetMapping(value = "/denglu")
+    public String denglu() {
+
+        return "denglu";
+    }
+
+    @GetMapping(value = "/zhuce")
+    public String zhuce() {
+        return "zhuce";
+    }
+
+    @GetMapping(value = "/shouye")
+    public String shouye() {
+        return "shouye";
+    }
+
+    @GetMapping(value = "/tofive")
+    public String tofive() {
+        return "tofive";
     }
 
 
